@@ -2,12 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import { Camera } from 'lucide-react';
+
 
 function App() {
   const [count, setCount] = useState(0)
+  const notify = () => toast("Wow so easy!");
+
 
   return (
     <>
+      <div>
+        <button onClick={notify}>Notify!</button>
+        <ToastContainer />
+      </div>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
