@@ -8,6 +8,7 @@ export default {
         'navbar-dark': "url('/images/navbar-dark.png')",
         'carousel': "url('/images/carousel.jpg')",
         'cover1': "url('/images/cover1.jpg')",
+
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
