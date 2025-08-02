@@ -6,6 +6,8 @@ export default {
       backgroundImage: {
         'navbar-light': "url('/images/navbar-light.png')",
         'navbar-dark': "url('/images/navbar-dark.png')",
+        'carousel': "url('/images/carousel.jpg')",
+        'cover1': "url('/images/cover1.jpg')",
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

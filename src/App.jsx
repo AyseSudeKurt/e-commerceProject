@@ -1,25 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
 import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import { Camera } from 'lucide-react';
-import Header from "./layout/Header";
+import { BrowserRouter as Router } from 'react-router-dom';
 
+import Header from './layout/Header';
+import PageContent from './layout/PageContent';
+import Footer from './layout/Footer';
 
 function App() {
-
   return (
-    <div className="App">
-      <Header />
-      <main className="p-4">
-
-      </main>
-    </div>
-  )
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <PageContent />
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
