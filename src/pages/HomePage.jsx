@@ -1,7 +1,27 @@
-import React from 'react';
-import { Circle, Clock, ChartArea, ChevronRight } from 'lucide-react';
+import React, { useRef, useState, useEffect } from 'react';
+import { Circle, Clock, ChartArea, ChevronRight, ChevronLeft } from 'lucide-react';
 
 function HomePage() {
+
+    const carouselRef = useRef(null);
+    const [index, setIndex] = useState(0);
+    const imageCount = 2;
+
+    useEffect(() => {
+        if (carouselRef.current) {
+            carouselRef.current.style.transform = `translateX(-${index * 100}%)`;
+        }
+    }, [index]);
+
+    const handlePrev = () => {
+        setIndex((prev) => (prev - 1 + imageCount) % imageCount);
+    };
+
+    const handleNext = () => {
+        setIndex((prev) => (prev + 1) % imageCount);
+    };
+
+
     return (
         <div>
             <div className='w-full h-[770px] bg-[#FAFAFA]'>
@@ -201,36 +221,61 @@ function HomePage() {
                 </div>
             </div>
 
-            {/* Carousel */}
-            <div className="w-full h-[709px] border-[#FFFFFF] bg-[#23856D] rounded-[5px] border-solid">
-                <div className='w-[1036px] h-[711px] pl-[232.5px] py-28 gap-[80px]'>
-                    <div className='w-[1049px] h-[599px] gap-[30px] flex flex-row'>
-                        <div className='w-[509px] h-[432px] mt-[60px] gap-[30px] text-[#FFFFFF]'>
-                            <h5 className='w-[154px] h-[30px] font-montserrat text-xl font-normal text-[#FFFFFF]'>SUMMER 2020</h5>
-                            <br></br>
-                            <h1 className='w-[509px] h-[160px] font-montserrat font-bold leading-[80px] text-6xl'>Vita Classic Product</h1>
-                            <br></br>
-                            <br></br>
-                            <h4 className='w-[341px] h-[40px] font-montserrat font-normal text-sm tracking-[0.2px]'>We know how large objects will act, We know how are objects will act, We know</h4>
-                            <br></br>
-                            <div className='w-[292px] h-[52px] gap-[34px] text-[#FFFFFF] flex flex-row items-baseline'>
-                                <h5 className='w-[77px] h-[32px] font-montserrat font-bold text-2xl tracking-[0.1px]'>$16.48</h5>
-                                <button className='bg-[#2DC071] w-[181px] h-[52px] rounded-[5px] py-4	px-10'>
-                                    <p className='w-[101px] h-[22px] font-montserrat font-bold text-sm tracking-[0.2px] flex text-nowrap'>ADD TO CART</p>
-                                </button>
-                            </div>
-                        </div>
 
-                        <div className="w-[510px] h-[685px] overflow-hidden">
-                            <img
-                                src="/images/cr2.png"
-                                alt="Product"
-                                className="w-[450px] h-[597px] object-top rounded-[5px]"
-                            />
+            <div className="relative  w-fit h-[716px] overflow-hidden border border-[#DEDEDE] rounded-[5px]">
+                <div className="w-fit h-[716px] absolute z-10">
+                    <div className="w-[975px] h-[651px] top-[48px] left-[232px] pl-[112px] pb-[112px] gap-[80px]">
+                        <div className="w-[975px] h-[427px] pb-[48px] pt-[48px] gap-[30px]">
+                            <div className="w-[599px] h-[331px] gap-[35px]">
+                                <h5 className="text-white w-[154px] h-[30px] font-montserrat font-normal text-base tracking-[0.1px] mt-[150px] flex flex-nowrap">SUMMER 2020</h5>
+                                <br></br>
+                                <br></br>
+                                <h1 className="text-white w-[509px] h-[160px] font-montserrat font-bold text-6xl	tracking-[0.2px]">Vita Classic Product</h1>
+                                <br></br>
+                                <h4 className="text-white w-[500px] h-[60px] font-montserrat font-normal text-xl tracking-[0.2px] flex flex-nowrap">We know how large objects will act, We know<br></br>how are objects will act, We know</h4>
+                                <br></br>
+                                <br></br>
+                                <div className='w-[292px] h-[52px] gap-[34px] text-white flex flex-row items-baseline	'>
+                                    <h5 className='font-montserrat w-[77px] h-[32px] font-bold text-2xl tracking-[0.1px]'>$16.48</h5>
+                                    <button className='w-[280px] h-[52px] whitespace-nowrap border-[5px] pt-[15px] pb-[15px] pr-[40px] pl-[40px] bg-[#2DC071] font-montserrat font-bold border-none'>ADD TO CARD</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div ref={carouselRef} className="flex transition-transform duration-500">
+                    <img src="/images/shop1.jpg" className="w-full flex-shrink-0 object-cover"></img>
+                    <img src="/images/cl2.jpg" className="w-full flex-shrink-0 object-cover"></img>
+                </div>
+
+                <button onClick={handlePrev} className="absolute top-1/2 left-4 transform -translate-y-1/2  p-2 ">
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+
+                <button onClick={handleNext} className="absolute top-1/2 right-4 transform -translate-y-1/2  p-2 ">
+                    <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    {[0, 1].map((i) => (
+                        <button
+                            key={i}
+                            onClick={() => setIndex(i)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === i ? 'bg-blue-600 scale-110' : 'bg-gray-300'
+                                }`}
+                        />
+                    ))}
+                </div>
+
+
             </div>
+
+
+
+
+
+
 
             <div className='w-full h-[682px] bg-[#FFFFFF]'>
                 <div className='w-full h-[682px] gap-[30px] flex flex-row'>

@@ -7,6 +7,7 @@ export default {
         'navbar-light': "url('/images/navbar-light.png')",
         'navbar-dark': "url('/images/navbar-dark.png')",
         'carousel': "url('/images/carousel.jpg')",
+        'carousel2': "url('/images/carousel2.jpg')",
         'cover1': "url('/images/cover1.jpg')",
         'cover2': "url('/images/cover2.jpg')",
         'cover3': "url('/images/cover3.jpg')",
@@ -24,6 +25,9 @@ export default {
         'c1': "url('/images/c1.jpg')",
         'c2': "url('/images/c2.jpg')",
         'c3': "url('/images/c3.jpg')",
+        'sale': "url('/images/sale.jpg')",
+        'shop1': "url('/images/shop1.jpg')",
+        'cl2': "url('/images/cl2.jpg')",
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
