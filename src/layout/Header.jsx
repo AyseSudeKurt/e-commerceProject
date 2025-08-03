@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Mail, Phone, ChevronDown, Search, ShoppingCart, Heart, UserRound, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import carousel from '/images/carousel.jpg';
 
 const Header = () => {
 
