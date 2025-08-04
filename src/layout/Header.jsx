@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Mail, Phone, ChevronDown, Search, ShoppingCart, Heart, UserRound, ChevronLeft, ChevronRight } from 'lucide-react';
 
-import carousel from '/images/carousel.jpg';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 
 const Header = () => {
 
@@ -38,9 +40,125 @@ const Header = () => {
 
         <div className="flex flex-col lg:flex-row lg:items-center w-full lg:w-auto justify-between lg:justify-normal gap-96">
 
-          <ul className="flex gap-4 font-montserrat font-bold text-sm text-[#737373]">
+          <ul className="flex gap-4 font-montserrat font-bold text-sm text-[#737373] align-baseline">
             <li>Home</li>
-            <li className="flex items-center gap-1">Shop <ChevronDown className="w-4 h-4" /></li>
+            <Menu as="div" className="relative inline-block">
+              <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                Shop
+                <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
+              </MenuButton>
+
+              <MenuItems
+                transition
+                className=" flex flex-row  absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+              >
+                <div className="py-1">
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="font-bold block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Kadın
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Bags
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Belts
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Cosmetics
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Bags
+                    </a>
+                  </MenuItem>
+                  <form action="#" method="POST">
+                    <MenuItem>
+                      <button
+                        type="submit"
+                        className="block w-full px-4 py-2 text-left text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                      >
+                        Hats
+                      </button>
+                    </MenuItem>
+                  </form>
+                </div>
+
+                <div className="py-1 flex flex-col">
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="font-bold block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Erkek
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Bags
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Belts
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Cosmetics
+                    </a>
+                  </MenuItem>
+                  <MenuItem>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                    >
+                      Bags
+                    </a>
+                  </MenuItem>
+                  <form action="#" method="POST">
+                    <MenuItem>
+                      <button
+                        type="submit"
+                        className="block w-full px-4 py-2 text-left text-sm text-[#737373] data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+                      >
+                        Hats
+                      </button>
+                    </MenuItem>
+                  </form>
+                </div>
+              </MenuItems>
+            </Menu>
             <li>About</li>
             <li>Blog</li>
             <li>Contact</li>
