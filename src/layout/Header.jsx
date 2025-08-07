@@ -6,7 +6,6 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 import { NavLink } from "react-router-dom";
 
-import ShopPage from './pages/ShopPage';
 
 
 const Header = () => {
