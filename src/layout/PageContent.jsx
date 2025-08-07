@@ -16,7 +16,7 @@ function PageContent() {
           ana sayfa için `exact` prop'u eklenir.
         */}
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/shop" component={ShopPage} />
+                <Route path="/shop" component={ShopPage} />
                 {/* Diğer sayfalar buraya eklenecek */}
                 {/* Örnek: <Route path="/products" component={ProductsPage} /> */}
             </Switch>
