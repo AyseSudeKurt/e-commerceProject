@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'; // Switch ve Route import edil
 // Sayfa bileşenlerinizi import edin
 import HomePage from '../pages/HomePage';
 import ShopPage from '../pages/ShopPage';
+import ProductDetailPage from '../pages/ProductDetailPage';
 
 function PageContent() {
     return (
@@ -16,6 +17,7 @@ function PageContent() {
         */}
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/shop" component={ShopPage} />
+                <Route path="/productDetail" component={ProductDetailPage} />
                 {/* Diğer sayfalar buraya eklenecek */}
                 {/* Örnek: <Route path="/products" component={ProductsPage} /> */}
             </Switch>

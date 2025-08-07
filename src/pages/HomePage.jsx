@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Circle, Clock, ChartArea, ChevronRight, ChevronLeft } from 'lucide-react';
 
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 function HomePage() {
 
     const carouselRef = useRef(null);
@@ -22,8 +25,57 @@ function HomePage() {
     };
 
 
+
+
     return (
         <div>
+            <div className="relative  w-fit h-[716px] overflow-hidden border border-[#DEDEDE] rounded-[5px]">
+                <div className="w-fit h-[716px] absolute z-10">
+                    <div className="w-[975px] h-[651px] top-[48px] left-[232px] pl-[112px] pb-[112px] gap-[80px]">
+                        <div className="w-[975px] h-[427px] pb-[48px] pt-[48px] gap-[30px]">
+                            <div className="w-[599px] h-[331px] gap-[35px]">
+                                <h5 className="text-white w-[142px] h-[24px] font-montserrat font-bold text-base tracking-[0.1px] mt-[150px] flex flex-nowrap">SUMMER 2020</h5>
+                                <br></br>
+                                <br></br>
+                                <h1 className="text-white w-[700px] h-[80px] font-montserrat font-bold text-6xl	tracking-[0.2px]">NEW COLLECTION</h1>
+                                <br></br>
+                                <br></br>
+                                <h4 className="text-white w-[376px] h-[60px] font-montserrat font-normal text-xl tracking-[0.2px]">We know how large objects will act,<br></br>but things on a small scale.</h4>
+                                <br></br>
+                                <button className="w-[221px] h-[62px] border-[5px] pt-[15px] pb-[15px] pr-[40px] pl-[40px] bg-[#2DC071] border-none">
+                                    <h3 className="w-[190px] h-[32px] text-white font-montserrat font-bold text-2xl	tracking-[0.1px] flex"><a href="/shop">SHOP NOW</a></h3>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div ref={carouselRef} className="flex transition-transform duration-500">
+                    <img src="/images/carousel.jpg" className="w-full flex-shrink-0 object-cover"></img>
+                    <img src="/images/carousel2.jpg" className="w-full flex-shrink-0 object-cover"></img>
+                </div>
+
+                <button onClick={handlePrev} className="absolute top-1/2 left-4 transform -translate-y-1/2  p-2 ">
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+
+                <button onClick={handleNext} className="absolute top-1/2 right-4 transform -translate-y-1/2  p-2 ">
+                    <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    {[0, 1].map((i) => (
+                        <button
+                            key={i}
+                            onClick={() => setIndex(i)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === i ? 'bg-blue-600 scale-110' : 'bg-gray-300'
+                                }`}
+                        />
+                    ))}
+                </div>
+
+
+            </div>
             <div className='w-full h-[770px] bg-[#FAFAFA]'>
                 <div className='w-[1124px] h-[824px] flex justify-center py-20  ml-[120px]'>
                     <div className='w-[1050px] h-[610px]  flex justify-center flex-col'>
@@ -39,7 +91,7 @@ function HomePage() {
                                     <h2 className='w-[40px] h-[24px] font-montserrat font-bold text-base tracking-[0.1px] text-[#252B42] ml-[64px] py-3'>MEN</h2>
                                 </div>
                             </div>
-                            <div className='w-[240px] h-[500px] bg-cover2 bg-no-repeat bg-cover bg-center bg-top'>
+                            <div className='w-[240px] h-[500px] bg-cover2 bg-no-repeat bg-cover bg-center '>
                                 <div className='w-[136px] h-[48px] bg-[#FFFFFF] ml-[48px] mt-[426px] top-[434px] left-[21px]'>
                                     <h2 className='w-[69px] h-[24px] font-montserrat font-bold text-base tracking-[0.1px] text-[#252B42] ml-[35px] py-3 pr-4'>WOMEN</h2>
                                 </div>
