@@ -20,7 +20,9 @@ function App() {
         <Route path="/shop">
           <ShopPage />
         </Route>
-
+        <Route path="/productDetail">
+          <ProductDetailPage />
+        </Route>
       </Switch>
       <Footer />
     </div>
