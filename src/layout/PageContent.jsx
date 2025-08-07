@@ -17,7 +17,6 @@ function PageContent() {
         */}
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/shop" component={ShopPage} />
-                <Route path="/productDetail" component={ProductDetailPage} />
                 {/* Diğer sayfalar buraya eklenecek */}
                 {/* Örnek: <Route path="/products" component={ProductsPage} /> */}
             </Switch>
