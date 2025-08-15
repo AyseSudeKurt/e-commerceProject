@@ -8,7 +8,7 @@ import Footer from './layout/Footer';
 import HomePage from './pages/HomePage';
 import ShopPage from './pages/ShopPage';
 import ProductDetailPage from './pages/ProductDetailPage';
-import About from './pages/about';
+import About from './pages/About';
 
 function AppLayout() {
   const location = useLocation();
