@@ -41,7 +41,13 @@ export default {
         's2': "url('/images/s2.jpg')",
         's3': "url('/images/s3.jpg')",
         's4': "url('/images/s4.jpg')",
-        'new2': "url('/images/new2.jpg')"
+        'new2': "url('/images/new2.jpg')",
+        'about1': "url('/images/aboutt.png')",
+        'video': "url('/images/video.jpg')",
+        'meet1': "url('/images/meet1.jpg')",
+        'meet2': "url('/images/meet2.jpg')",
+        'meet3': "url('/images/meet3.jpg')"
+
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
