@@ -146,7 +146,7 @@ const Header = () => {
                 </div>
               </MenuItems>
             </Menu>
-            <li>About</li>
+            <li><a href="/about">About</a></li>
             <li>Blog</li>
             <li>Contact</li>
             <li>Pages</li>
