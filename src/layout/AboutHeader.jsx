@@ -8,7 +8,7 @@ const AboutHeader = () => {
                 <div className='w-[187px] h-[58px] mt-[40px] ml-[216px] font-montserrat font-bold text-2xl tracking-[0.1px] text-[#252B42]'>Bandage</div>
                 <div className='w-[815px] h-[58px] mt-[30px] ml-[150px] flex flex-row'>
                     <ul className='w-[275px] h-[24px] mt-[17px] gap-[21px] flex'>
-                        <li className='w-[43px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Home</li>
+                        <li className='w-[43px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'><a href='/'>Home</a></li>
                         <li className='w-[59px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Product</li>
                         <li className='w-[52px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Pricing</li>
                         <li className='w-[58px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Contact</li>
