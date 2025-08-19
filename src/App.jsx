@@ -12,6 +12,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
 import Team from './pages/Team';
+import Signup from './pages/Signup';
 
 function AppLayout() {
   const location = useLocation();
@@ -47,6 +48,9 @@ function AppLayout() {
         </Route>
         <Route path="/team">
           <Team />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
       </Switch>
       <Footer />

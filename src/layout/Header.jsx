@@ -157,7 +157,7 @@ const Header = () => {
             <li>
               <button className="flex items-center gap-1 text-main-blue">
                 <UserRound className="w-4 h-4" />
-                <p className="font-montserrat font-bold text-xs">Login / Register</p>
+                <p className="font-montserrat font-bold text-xs"><a href="/signup">Login / Register</a></p>
               </button>
             </li>
             <li><Search className="w-4 h-4 text-main-blue" /></li>
