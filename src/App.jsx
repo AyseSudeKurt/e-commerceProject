@@ -9,16 +9,20 @@ import HomePage from './pages/HomePage';
 import ShopPage from './pages/ShopPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import About from './pages/About';
+import Contact from './pages/Contact';
+import Pricing from './pages/Pricing';
 
 function AppLayout() {
   const location = useLocation();
 
   // Eğer /about sayfasındaysak özel header kullan
   const isAboutPage = location.pathname === '/about';
+  const isContactPage = location.pathname === '/contact';
+  const isPricingPage = location.pathname === '/pricing';
 
   return (
     <div className="flex flex-col min-h-screen">
-      {isAboutPage ? <AboutHeader /> : <Header />}
+      {isAboutPage || isContactPage || isPricingPage ? <AboutHeader /> : <Header />}
 
       <Switch>
         <Route path="/" exact>
@@ -32,6 +36,12 @@ function AppLayout() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/pricing">
+          <Pricing />
         </Route>
       </Switch>
       <Footer />

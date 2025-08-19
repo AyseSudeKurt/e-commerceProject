@@ -11,7 +11,7 @@ const AboutHeader = () => {
                         <li className='w-[43px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'><a href='/'>Home</a></li>
                         <li className='w-[59px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Product</li>
                         <li className='w-[52px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Pricing</li>
-                        <li className='w-[58px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Contact</li>
+                        <li className='w-[58px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'><a href='/contact'>Contact</a></li>
                     </ul>
 
                     <div className='w-[300px] h-[52px] ml-[350px] gap-[45px] mt-[8px] flex flex-row'>

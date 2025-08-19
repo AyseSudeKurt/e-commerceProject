@@ -148,7 +148,7 @@ const Header = () => {
             </Menu>
             <li><a href="/about">About</a></li>
             <li>Blog</li>
-            <li>Contact</li>
+            <li><a href='/contact'>Contact</a></li>
             <li>Pages</li>
           </ul>
 

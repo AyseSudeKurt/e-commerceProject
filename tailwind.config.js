@@ -46,7 +46,8 @@ export default {
         'video': "url('/images/video.jpg')",
         'meet1': "url('/images/meet1.jpg')",
         'meet2': "url('/images/meet2.jpg')",
-        'meet3': "url('/images/meet3.jpg')"
+        'meet3': "url('/images/meet3.jpg')",
+        'yeniden': "url('/images/yeniden.png')"
 
       },
       fontFamily: {
