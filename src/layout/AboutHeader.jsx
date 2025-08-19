@@ -10,7 +10,7 @@ const AboutHeader = () => {
                     <ul className='w-[275px] h-[24px] mt-[17px] gap-[21px] flex'>
                         <li className='w-[43px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'><a href='/'>Home</a></li>
                         <li className='w-[59px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Product</li>
-                        <li className='w-[52px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'>Pricing</li>
+                        <li className='w-[52px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'><a href="/pricing">Pricing</a></li>
                         <li className='w-[58px] h-[24px] font-montserrat font-bold text-sm tracking-[0.2px] text-[#737373]'><a href='/contact'>Contact</a></li>
                     </ul>
 

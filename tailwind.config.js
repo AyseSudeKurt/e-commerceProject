@@ -47,8 +47,21 @@ export default {
         'meet1': "url('/images/meet1.jpg')",
         'meet2': "url('/images/meet2.jpg')",
         'meet3': "url('/images/meet3.jpg')",
-        'yeniden': "url('/images/yeniden.png')"
-
+        'yeniden': "url('/images/yeniden.png')",
+        'z1': "url('/images/z1.jpg')",
+        'z2': "url('/images/z2.jpg')",
+        'z3': "url('/images/z3.jpg')",
+        'z4': "url('/images/z4.jpg')",
+        'z5': "url('/images/z5.jpg')",
+        "team1": "url('/images/team1.jpg')",
+        "team2": "url('/images/team2.jpg')",
+        "team3": "url('/images/team3.jpg')",
+        "team4": "url('/images/team4.jpg')",
+        "team5": "url('/images/team5.jpg')",
+        "team6": "url('/images/team6.jpg')",
+        "team7": "url('/images/team7.jpg')",
+        "team8": "url('/images/team8.jpg')",
+        "team9": "url('/images/team9.jpg')",
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

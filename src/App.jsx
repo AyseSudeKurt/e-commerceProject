@@ -11,6 +11,7 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
+import Team from './pages/Team';
 
 function AppLayout() {
   const location = useLocation();
@@ -19,10 +20,11 @@ function AppLayout() {
   const isAboutPage = location.pathname === '/about';
   const isContactPage = location.pathname === '/contact';
   const isPricingPage = location.pathname === '/pricing';
+  const isTeamPage = location.pathname === '/team';
 
   return (
     <div className="flex flex-col min-h-screen">
-      {isAboutPage || isContactPage || isPricingPage ? <AboutHeader /> : <Header />}
+      {isAboutPage || isContactPage || isPricingPage || isTeamPage ? <AboutHeader /> : <Header />}
 
       <Switch>
         <Route path="/" exact>
@@ -42,6 +44,9 @@ function AppLayout() {
         </Route>
         <Route path="/pricing">
           <Pricing />
+        </Route>
+        <Route path="/team">
+          <Team />
         </Route>
       </Switch>
       <Footer />
